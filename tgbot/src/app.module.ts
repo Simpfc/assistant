@@ -11,16 +11,16 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: 'localhost',
-      port: 3306,
-      username: 'root',
-      password: 'root',
-      database: 'assistant',
-      entities: [],
-      synchronize: true,
-    }),
+    // TypeOrmModule.forRoot({
+    //   type: 'mysql',
+    //   host: 'localhost',
+    //   port: 3306,
+    //   username: 'root',
+    //   password: 'root',
+    //   database: 'assistant',
+    //   entities: [],
+    //   synchronize: true,
+    // }),
     ScheduleModule.forRoot(),
     // TelegrafModule.forRoot({
     //   token: '6804661798:AAHl9RzS_3oSGL1JNFFTln5erAAXD8Ai4gs',
