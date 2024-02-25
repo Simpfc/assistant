@@ -54,7 +54,7 @@ export class GreeterUpdate {
   @Cron('20 */2 * * * *')
   async reminderTest(
   ) {
-    console.log(`Hey lets do evening planning`);
+    console.log(`Hey lets do evening planning ${new Date().getHours()}`);
     await this.bot.telegram.sendMessage('583363752', 'do it')
     // return `Hey lets do planning`;
   }
