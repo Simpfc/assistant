@@ -51,7 +51,7 @@ export class GreeterUpdate {
     // return `Hey lets do planning`;
   }
 
-  @Cron('20 10 23 * * *')
+  @Cron('20 20 23 * * *')
   async reminderTest(
   ) {
     console.log(`Hey lets do evening planning`);
