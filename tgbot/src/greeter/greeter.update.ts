@@ -51,10 +51,10 @@ export class GreeterUpdate {
     // return `Hey lets do planning`;
   }
 
-  @Cron('20 01 23 * * *')
+  @Cron('20 10 23 * * *')
   async reminderTest(
   ) {
-    console.log(`Hey lets do planning`);
+    console.log(`Hey lets do evening planning`);
     await this.bot.telegram.sendMessage('583363752', 'do it')
     // return `Hey lets do planning`;
   }
