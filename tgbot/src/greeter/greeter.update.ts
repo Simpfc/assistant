@@ -1,4 +1,4 @@
-import {Command, Ctx, Hears, Start, Update, Sender, InjectBot} from 'nestjs-telegraf';
+import {Command, Ctx, Hears, Start, Update, Sender, InjectBot, Message} from 'nestjs-telegraf';
 import { UpdateType as TelegrafUpdateType } from 'telegraf/typings/telegram-types';
 import { Context } from '../interfaces/context.interface';
 import {HELLO_SCENE_ID, WIZARD_SCENE_ID, PLANNING_SCENE_ID, GreeterBotName} from '../app.constants';
@@ -43,9 +43,17 @@ export class GreeterUpdate {
     console.log(ctx.message.chat.id);
     await ctx.scene.enter(PLANNING_SCENE_ID);
   }
-  @Cron('*/10 * * * * *')
+  @Cron('20 01 9 * * *')
   async reminder(
-  ): Promise<undefined> {
+  ) {
+    console.log(`Hey lets do planning`);
+    await this.bot.telegram.sendMessage('583363752', 'do it')
+    // return `Hey lets do planning`;
+  }
+
+  @Cron('20 01 23 * * *')
+  async reminderTest(
+  ) {
     console.log(`Hey lets do planning`);
     await this.bot.telegram.sendMessage('583363752', 'do it')
     // return `Hey lets do planning`;
